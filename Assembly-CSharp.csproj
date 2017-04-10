@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\JetdroidLevelDesign\Scripts\AirMeter.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\AlienB.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\AlienC.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\Door.cs" />

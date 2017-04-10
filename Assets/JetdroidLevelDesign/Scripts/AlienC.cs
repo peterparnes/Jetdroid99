@@ -35,7 +35,7 @@ public class AlienC : MonoBehaviour {
 
 	void OnFire() {
 		if (projectile != null) {
-			var clone = Instantiate (projectile, transform.position, Quaternion.identity);
+			Instantiate (projectile, transform.position, Quaternion.identity);
 		}
 	}
 

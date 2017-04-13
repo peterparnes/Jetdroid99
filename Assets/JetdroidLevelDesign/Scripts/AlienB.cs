@@ -22,6 +22,9 @@ public class AlienB : MonoBehaviour {
 			} else {
 				animator.SetInteger ("AnimState", 1);
 			}
+		} else if (target.gameObject.tag == "Deadly") {
+			animator.SetInteger ("AnimState", 1);
+			StartCoroutine (ToggleAnimState ());
 		}
 	}
 
@@ -32,5 +35,10 @@ public class AlienB : MonoBehaviour {
 
 	void Attack() {
 		readyToAttack = true; 
+	}
+
+	IEnumerator ToggleAnimState() {
+		yield return new WaitForSeconds (1);
+		animator.SetInteger ("AnimState", 0);
 	}
 }

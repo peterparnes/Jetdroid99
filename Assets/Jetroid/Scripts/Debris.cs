@@ -7,6 +7,8 @@ public class Debris : MonoBehaviour {
 	private Color start;
 	private Color end;
 	private float t = 0f;
+	private Player player;
+	private Restart restart;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,5 @@ public class Debris : MonoBehaviour {
 		if (renderer2D.material.color.a <= 0f) {
 			Destroy (gameObject);
 		}
-
 	}
 }

@@ -51,6 +51,7 @@
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\AlienC.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\Door.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\DoorTrigger.cs" />
+     <Compile Include="Assets\JetdroidLevelDesign\Scripts\GameManager.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\Projectile.cs" />
      <Compile Include="Assets\JetdroidLevelDesign\Scripts\Switch.cs" />
      <Compile Include="Assets\Jetroid\Scripts\CameraFollow.cs" />
@@ -64,8 +65,12 @@
      <Compile Include="Assets\Jetroid\Scripts\Player.cs" />
      <Compile Include="Assets\Jetroid\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Jetroid\Scripts\RandomSprite.cs" />
+     <Compile Include="Assets\Jetroid\Scripts\Restart.cs" />
      <Compile Include="Assets\TileMapEditor\Scripts\TileBrush.cs" />
      <Compile Include="Assets\TileMapEditor\Scripts\TileMap.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/parnes/work/web/unity/JetdroidLevelDesign/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

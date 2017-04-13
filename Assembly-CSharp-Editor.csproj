@@ -49,6 +49,9 @@
      <Compile Include="Assets\TileMapEditor\Editor\NewTileMapMenu.cs" />
      <Compile Include="Assets\TileMapEditor\Editor\TileMapEditor.cs" />
      <Compile Include="Assets\TileMapEditor\Editor\TilePickerWindow.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/parnes/work/web/unity/JetdroidLevelDesign/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>

@@ -42,8 +42,6 @@ public class Player : MonoBehaviour {
 			if (absVelX < maxVelocity.x) {
 
 				var newSpeed = speed * controller.moving.x;
-
-
 				forceX = standing ? newSpeed : (newSpeed * airSpeedMultiplier);
 
 				renderer2D.flipX = forceX < 0;
@@ -66,4 +64,5 @@ public class Player : MonoBehaviour {
 		body2D.AddForce(new Vector2(forceX, forceY));
 
 	}
+		
 }

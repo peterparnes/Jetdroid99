@@ -4,11 +4,18 @@ using System.Collections;
 public class Explode : MonoBehaviour {
 
 	public Debris debris;
+	public string restartScene; 
+	public float restartDelay = 0.5f;
+
 	public int totalDebris = 10;
+
+	private GameObject gamemaster; 
 
 	// Use this for initialization
 	void Start () {
-	
+		//gamemaster = GameObject.FindWithTag("GameMaster");
+		//Debug.Log (gamemaster);
+
 	}
 	
 	// Update is called once per frame
@@ -41,6 +48,23 @@ public class Explode : MonoBehaviour {
 			body2D.AddForce (Vector3.up * Random.Range (500, 2000));
 		}
 
+		// new Restart ().OnRestart (restartScene,restartDelay);
+
 		Destroy (gameObject);
+
+		GameManager.instance.OnRestartCurrentScene ();
+	
+		// restart.OnRestart (restartScene, restartDelay);
+
+		// StartCoroutine (ScheduleRestart());
+
 	}
+		
+
+	/*IEnumerator ScheduleRestart() {
+		Debug.Log ("Before delay");
+		yield return new WaitForSeconds (restartDelay);
+		Debug.Log ("After delay");
+		new Restart ().OnRestart (RestartScene);
+	}*/
 }

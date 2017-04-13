@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-	// private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-	private int level = 3;                                  //Current level number, expressed in game as "Day 1".
+	private int level = -1;                                  //Current level number 
 
+	public string[] scenes;
 
 	// XXX
 	// private bool loadLock;
@@ -55,22 +55,33 @@ public class GameManager : MonoBehaviour {
 
 	public void OnRestartCurrentScene() {
 		currentscene = SceneManager.GetActiveScene ().name;
-		Debug.Log("Active scene is '" + currentscene + "'.");
+		// Debug.Log("Active scene is '" + currentscene + "'.");
 		OnRestart ();
 	}
 
+	public void OnNextLevel() {
+		level++;
+		if (level >= scenes.Length) {
+			level = 0;
+		}
+		// Debug.Log (level + " " + scenes.Length + " " + scenes[level]);
+		currentscene = scenes[level];
+		DoNextLevel();
+	}
+
+	void DoNextLevel() {
+		SceneManager.LoadScene (currentscene); 
+	}
+
 	public void OnRestart() {
-		Debug.Log("OnRestart");
-		//if (!loadLock) {
-		//	loadLock = true;
-			StartCoroutine (DoRestart ());
-		//}
+		// Debug.Log("OnRestart");
+		StartCoroutine (DoRestart ());
 	}
 
 	IEnumerator DoRestart() {
-		Debug.Log ("Before delay2");
+		// Debug.Log ("Before delay2");
 		yield return new WaitForSeconds (delay);
-		Debug.Log ("After delay2");
+		// Debug.Log ("After delay2");
 		SceneManager.LoadScene (currentscene); 
 	}
 		

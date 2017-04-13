@@ -4,26 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class ClickToContinue : MonoBehaviour {
 
-	public string scene;
+	// public string scene;
 
-	private bool loadLock;
+	// private bool loadLock;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if ((Input.GetMouseButtonDown(0) || Input.anyKey) && !loadLock) {
+		if ((Input.GetMouseButtonDown(0) || Input.anyKey)) {
 			LoadScene ();
 		}
 
 	}
 
 	void LoadScene(){
-		loadLock = true;
-		SceneManager.LoadScene (scene);
+		// loadLock = true;
+		// SceneManager.LoadScene (scene);
+		GameManager.instance.OnNextLevel();
 	}
 }

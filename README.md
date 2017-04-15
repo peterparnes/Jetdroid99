@@ -1,2 +1,6 @@
-# JetdroidLevelDesign
-Code from the Lynda.com Unity 2D level design course
+# Jetdroid99 
+
+Simple gave flying game for learning Unity. 
+
+/Peter Parnes
+peter@parnes.com 
